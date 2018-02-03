@@ -1,0 +1,210 @@
+@font-face {
+	font-family: "chrono";
+	src: url('../font/SourceCodePro-Black.ttf');
+}
+
+@font-face {
+	font-family: "autre";
+	src: url('../font/RopaSans-Regular.ttf');
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "autre", 'Times New Roman', Times, serif;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 6px none #ffffff;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.chrono{
+    height: 60vh;
+    background-color: #666666;
+}
+.chrono .rouge{
+    background-color: #D1262E;
+    height: 100%;
+    width: 35%;
+    border-top: 10px solid black;
+}
+.rouge .information_lutteur_rouge{
+
+    margin-top: 10px;
+    width: 90%;
+    height: 10vh;
+    background-color: #D93C43;
+}
+
+.rouge .information_lutteur_rouge select{
+    width: 100%;
+    background-color: transparent;
+    border:0px solid transparent;
+    border-bottom: 1px solid black;
+    outline: none;
+    margin-bottom: 5px;
+}
+.rouge .information_lutteur_rouge option{
+    width: 90%;
+}
+.rouge .information_lutteur_rouge input{
+    width: 100%;
+    background-color: transparent;
+    border: 0px solid transparent;
+    color:white;
+    outline: none;
+}
+.rouge .information_lutteur_rouge input::-webkit-input-placeholder{
+    color:white;
+}
+
+.bleu{
+    border-top: 10px solid black;
+}
+.bleu .information_lutteur_bleu{
+
+    margin-top: 10px;
+    width: 90%;
+    height: 10vh;
+    background-color: #5D49DE;
+}
+
+.bleu .information_lutteur_bleu select{
+    width: 90%;
+    background-color: transparent;
+    border:0px solid transparent;
+    border-bottom: 1px solid black;
+    outline: none;
+    margin-bottom: 5px;
+}
+.bleu .information_lutteur_bleu option{
+    width: 90%;
+}
+.bleu .information_lutteur_bleu input{
+    width: 90%;
+    background-color: transparent;
+    border: 0px solid transparent;
+    color:white;
+    outline: none;
+}
+.bleu .information_lutteur_bleu input::-webkit-input-placeholder{
+    color:white;
+}
+.chrono .detail_chrono{
+    width: 30%;
+    display: flex;
+    flex-wrap: row;
+    font-family: "chrono", Helvetica, Arial, sans-serif;
+}
+
+.chrono .detail_chrono .chronometre{
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    color:white;
+}
+.chrono .detail_chrono .chronome{
+    height: 40vh;
+    width: 100%;
+    color:white;
+}
+.chrono .detail_chrono .chronometre p{
+    font-size: 20px;
+    margin: 0;
+    font-size: 40px;
+}
+.lutteur_victoire{
+    height: 10vh;
+    background-color: #666666;
+    display: flex;
+    flex-direction: row;
+}
+
+.victoire_rouge{
+    background-color: #D1262E;
+    height: 100%;
+} 
+.victoire_bleu{
+    background-color: #4F1AE8;
+    height: 100%;
+} 
+.chrono .bleu{
+    background-color: #4F1AE8;
+    height: 100%;
+    width: 35%;
+}
+
+.list_combat{
+    width: 100%;
+    height: 40vh;
+}
+.list_combat span{
+    font-size: 2em;
+    color:white;
+}
+.combat_dispo{
+    height: 30vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.combat_dispo section {
+    height: 10vh;
+}
+.detail_dispo{
+    height: 30vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.list_des_combat{
+    background-color: #4b4b4b;
+    height: 100%;
+    width: 35%;
+}
+.titre_combat{
+    width: 100%;
+    height: 10vh;
+    background-color: #212121;
+    -webkit-box-shadow: -2px 7px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 7px 5px 0px rgba(0,0,0,0.75);
+box-shadow: -2px 7px 5px 0px rgba(0,0,0,0.75);
+}
+.detail_combat{
+    height: 40vh;
+    width: 65%;
+}
+.titre_detail{
+    height: 10vh;
+    width: 100%;
+    background-color: #4b4b4b;
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+}
