@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vh;
+}
+.rouge{
+    background: #d1262e;
+    height: 100vh;
+}
+.rouge .score, .score_b{
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.rouge .avertissement{
+    height: 100%;
+    padding-left: 10px;
+}
+.avertissement_b{
+    height: 100%;
+    padding-right: 10px;
+}
+.bleu .avertissement_b .avert{
+    font-size: 40px;
+    color:white;
+}
+
+.rouge .avertissement .avert{
+    font-size: 40px;
+    color:white;
+}
+.rouge .point_rouge, .point_b{
+    height: 100%;
+    background-color: black;
+    color:white;
+    font-size: 72px;
+}
+.chrono{
+    background-color: grey;
+    height: 100vh;
+}
+
+.poids{
+    height: 10vh;
+    width: 100%;
+    color:white;
+    background-color: #3D3D3D;
+    margin-bottom: 30vh;
+}
+
+.style{
+    height: 10vh;
+    color:white;
+    width: 100%;
+    background-color: #3D3D3D;
+}
+
+.chrono_temps{
+    background-color: #303030;
+    width: 100%;
+    color:white;
+    font-size: 72px;
+    height: 200px;
+}
+.club_r, .club_b{
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    font-size: 40px;
+}
+.manche{
+    height: 50px;
+    background-color: black;
+    color:white;
+    width: 50%;
+    font-size: 30px;
+}
+.bleu{
+    background: #2631d1;
+    height: 100vh;
+}
+
+.lutteur_r , .lutteur_b {
+    background-color: #3D3D3D;
+    color:white;
+    width: 100%;
+    height: 50px;
+    font-size: 28px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}

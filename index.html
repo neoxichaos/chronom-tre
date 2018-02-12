@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/simflex.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <title>Chrono lutte</title>
 </head>
 
@@ -16,15 +17,38 @@
             <div class="information_lutteur_rouge line alg-center amd-center jlg-center jmd-center">
                 <div class="club">
                     <select class="club_rouge">
-                        <option value="" selected>Choisir un club</option>
+                        <option value="" selected disabled>Choisir un club</option>
                     </select>
                     <input list="lutteur" type="text" placeholder="Nom du lutteur" class="nom_lutteur_rouge" onkeydown="if(event.keyCode==32) return false;">
                     <datalist id="lutteur" class="lutteur_nom">
                     </datalist>
                 </div>
             </div>
-            <div class="point">
-
+            <div class="point line">
+                <div class="point_total line alg-center amd-center jlg-center jmd-center">
+                    <p>
+                        <span class="point_rouge">0</span>
+                    </p>
+                </div>
+                <div class="point_ajout line alg-center flg-column">
+                    <span class="plus_1">
+                        <i class="fa fa-plus" aria-hidden="true"></i> 1</span>
+                    <span class="plus_2">
+                        <i class="fa fa-plus" aria-hidden="true"></i> 2</span>
+                    <span class="plus_3">
+                        <i class="fa fa-plus" aria-hidden="true"></i> 3</span>
+                    <span class="plus_4">
+                        <i class="fa fa-plus" aria-hidden="true"></i> 4</span>
+                    <span class="plus_5">
+                        <i class="fa fa-plus" aria-hidden="true"></i> 5</span>
+                </div>
+                <div class="point_redu line alg-center flg-column">
+                    <span class="moins_1">-1</span>
+                    <span class="moins_2">-2</span>
+                    <span class="moins_3">-3</span>
+                    <span class="moins_4">-4</span>
+                    <span class="moins_5">-5</span>
+                </div>
             </div>
         </div>
         <div class="detail_chrono container-fluid">
@@ -36,19 +60,130 @@
                     </p>
                 </div>
                 <div class="lutteur_victoire clg24 cmd24">
-                    <div class="victoire_rouge clg12 cmd24"></div>
-                    <div class="victoire_bleu clg12 cmd24"></div>
+                    <div class="victoire_rouge clg12 cmd24 line alg-center amd-center jlg-center jmd-center">
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                    </div>
+                    <div class="victoire_bleu clg12 cmd24 line alg-center amd-center jlg-center jmd-center">
+                        <i class="fa fa-trophy" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="lutteur_victoire clg24 cmd24">
+                    <div class="poids clg12 cmd24 line alg-center amd-center jlg-center jmd-center">
+                        <span>Poids</span>
+                        <input class="poids_lutteur" type="number" placeholder="Poids en kg">
+                    </div>
+                    <div class="style clg12 cmd24 line alg-center amd-center jlg-center jmd-center flg-column">
+                        <span>style</span>
+                        <select class="style_l">
+                            <option value="" selected disabled>style</option>
+                            <option value="Libre">Libre</option>
+                            <option value="Greco">Greco</option>
+                            <option value="Feminin">Feminin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="lutteur_avertissement clg24 cmd24">
+                    <div class="avertissement_rouge clg12 cmd24 line alg-center amd-center jlg-center jmd-center flg-between">
+                        <div class="rouge_plus_avert">
+                            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="rouge_avertissement_1">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                        <div class="rouge_avertissement_2">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                        <div class="rouge_avertissement_3">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                        <div class="rouge_moins_avert">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="avertissement_bleu clg12 cmd24 line alg-center amd-center jlg-center jmd-center">
+                        <div class="bleu_plus_avert">
+                            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="bleu_avertissement_1">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                        <div class="bleu_avertissement_2">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                        <div class="bleu_avertissement_3">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                        <div class="bleu_moins_avert">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="av  line alg-center amd-center jlg-center jmd-center">
+                    <p>Avertissement</p>
+                </div>
+                <div class="clg24 cmd24 timer">
+
+                </div>
+                <div class="lutteur_temps clg24 cmd24">
+                    <div class="manche_temps clg12 cmd24 line alg-center amd-center jlg-center jmd-center flg-column">
+                            <div class="line jlg-row">
+                        <span>Manche 2x</span> 
+                            <input type="number" value="3" placeholder="minute" class="minute_manche text-center">
+                            <span>:</span>
+                            <input type="number" value="0" class="text-center seconde_manche" placeholder="seconde">
+                        </div>
+                    </div>
+                    <div class="pause clg12 cmd24 line alg-center amd-center jlg-center jmd-center flg-column">
+                            <div class="line jlg-row">
+                        <span>Pause </span>
+                        
+                            <input type="number" value="0" placeholder="minute" class="text-center minute_pause">
+                            <span>:</span>
+                            <input type="number" value="30" class="text-center seconde_pause" placeholder="seconde">
+                        </div>
+                    </div>
+                </div>
+                <div class="clg24 cmd24">
+                    <p>manche
+                        <span class="manche">1</span>
+                    </p>
                 </div>
             </div>
         </div>
         <div class="bleu clg12 line jlg-center">
-            <div class="information_lutteur_bleu line alg-center amd-center jlg-center jmd-center">
+            <div class="information_lutteur_bleu line alg-center amd-center jlg-center jmd-center flg-column">
                 <select class="club_bleu">
-                    <option value="" selected>Choisir un club</option>
+                    <option value="" selected disabled>Choisir un club</option>
                 </select>
                 <input list="lutteur_bleu" type="text" placeholder="Nom du lutteur" class="nom_lutteur_bleu" onkeydown="if(event.keyCode==32) return false;">
                 <datalist id="lutteur_bleu" class="lutteur_nom_b">
                 </datalist>
+            </div>
+            <div class="point line">
+                <div class="point_redu line alg-center flg-column">
+                    <span class="moins_1_bleu">-1</span>
+                    <span class="moins_2_bleu">-2</span>
+                    <span class="moins_3_bleu">-3</span>
+                    <span class="moins_4_bleu">-4</span>
+                    <span class="moins_5_bleu">-5</span>
+                </div>
+                <div class="point_ajout line alg-center flg-column">
+                    <span class="plus_1_bleu">
+                        <i class="fa fa-plus" aria-hidden="true"></i> 1</span>
+                    <span class="plus_2_bleu">
+                        <i class="fa fa-plus" aria-hidden="true"></i> 2</span>
+                    <span class="plus_3_bleu">
+                        <i class="fa fa-plus" aria-hidden="true"></i> 3</span>
+                    <span class="plus_4_bleu">
+                        <i class="fa fa-plus" aria-hidden="true"></i> 4</span>
+                    <span class="plus_5_bleu">
+                        <i class="fa fa-plus" aria-hidden="true"></i> 5</span>
+                </div>
+                <div class="point_total line alg-center amd-center jlg-center jmd-center">
+                    <p>
+                        <span class="point_bleu">0</span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/chrono.css">
+    <link rel="stylesheet" href="css/simflex.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <title>Chrono lutte</title>
+    <title>Document</title>
+</head>
+
+<body class="container-fluid">
+    <section class="rouge clg8 cmd8 cxs8 line flg-column jlg-center alg-center">
+        <span class="nom_lutteur clg24 line flg-center jlg-center alg-center">
+            <span class="lutteur_r">Lutteur rouge</span>
+        </span>
+        <div class="score clg24 cmd24 cxs24 line flg-row jlg-center">
+            <div class="point_rouge clg9 cmd9 cxs9 line flg-center jlg-center alg-center">
+                <span class="point_rouge_">0</span>
+            </div>
+            <div class="avertissement clg3 cmd3 cxs3 line flg-column jlg-around alg-end">
+                <div class="avert avert-1">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="avert avert-2">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="avert avert-3">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="clg24 cmd24 cxs24 line flg-center jlg-center alg-center">
+            <span class=" club_r line flg-center alg-center jlg-center"></span>
+        </div>
+
+    </section>
+    <section class="chrono clg8 cmd8 cxs8">
+        <div class="info clg24 line">
+            <div class="poids clg12 cmd12 line alg-center amd-center jlg-center jmd-center flg-column">
+                <span>Poids</span>
+                <span class="poids_r"></span>
+            </div>
+            <div class="style clg12 cmd12 line alg-center amd-center jlg-center jmd-center flg-column">
+                <span>style</span>
+                <span class="style_l"></span>
+            </div>
+        </div>
+        <div class="clg24 line flg-center jlg-center alg-center">
+            <div class="chrono_temps  line flg-center jlg-center alg-center">
+                <span class="minute">0</span> :
+                <span class="seconde">0</span>
+            </div>
+        </div>
+        <div class="clg24 line flg-center jlg-center alg-center">
+            <div class="manche line flg-center jlg-center alg-center">
+                <span class="manche_l">Manche 1</span>
+            </div>
+        </div>
+    </section>
+    <div class="bleu clg8 cmd8 cxs8 line flg-column jlg-center alg-center">
+        <span class="nom_lutteur clg24 line flg-center jlg-center alg-center">
+            <span class="lutteur_b">Lutteur bleu</span>
+        </span>
+        <div class="score_b clg24 cmd24 cxs24 line flg-row jlg-center">
+            <div class="avertissement_b clg3 cmd3 cxs3 line flg-column jlg-around alg-end">
+                <div class="avert avert-1_b">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="avert avert-2_b">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="avert avert-3_b">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="point_b clg9 cmd9 cxs9 line flg-center jlg-center alg-center">
+                <span class="point_b">0</span>
+            </div>
+        </div>
+        <div class="clg24 cmd24 cxs24 line flg-center jlg-center alg-center">
+            <span class=" club_b line flg-center alg-center jlg-center"></span>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script>
+        function rouge() {
+            var minute = localStorage.getItem("minute");
+            $('.minute').html(minute);
+
+            var manche = localStorage.getItem("manche");
+            var pause = localStorage.getItem("pause");
+            if(pause == 0){
+                $('.manche_l').html("Manche 1");
+            } else if (pause == 1){
+                $('.manche_l').html("Pause");
+            } else if (pause == 2){
+                $('.manche_l').html("Dernière manche");
+            }
+
+            var style = localStorage.getItem("style");
+            if (style == "") {
+                $('.style_l').html("Pas de style");
+            } else {
+                $('.style_l').html(style);
+            }
+
+            var poids_r = localStorage.getItem("poids");
+            if (poids_r == "") {
+                $('.poids_r').html("Pas de poids");
+            } else {
+                $('.poids_r').html(poids_r+" kg");
+            }
+
+
+            var seconde = localStorage.getItem("seconde");
+            $('.seconde').html(seconde);
+
+            var point_r = localStorage.getItem("point_rouge");
+            $('.point_rouge_').html(point_r);
+            var lutteur_r = localStorage.getItem("lutteur_rouge");
+            if (lutteur_r == "") {
+                $('.lutteur_r').html("Lutteur rouge");
+            } else {
+                $('.lutteur_r').html(lutteur_r);
+            }
+
+            var club_r = localStorage.getItem("club_rouge");
+            if (club_r == "") {
+                $('.club_r').html("Club non selectionné");
+            } else {
+                $('.club_r').html(club_r);
+            }
+
+            var avert_r = localStorage.getItem("avertissement_rouge");
+            if (avert_r == 1) {
+                $('.avert-1').css('color', '#D1262E');
+                $('.avert-2').css('color', '#D1262E');
+                $('.avert-3').css('color', 'white');
+            } else if (avert_r == 0) {
+                $('.avert-1').css('color', '#D1262E');
+                $('.avert-2').css('color', '#D1262E');
+                $('.avert-3').css('color', '#D1262E');
+            } else if (avert_r == 2) {
+                $('.avert-1').css('color', '#D1262E');
+                $('.avert-2').css('color', 'white');
+                $('.avert-3').css('color', 'white');
+            } else if (avert_r == 3) {
+                $('.avert-1').css('color', 'white');
+                $('.avert-2').css('color', 'white');
+                $('.avert-3').css('color', 'white');
+            }
+            var point_b = localStorage.getItem("point_bleu");
+            $('.point_b').html(point_b);
+            var lutteur_b = localStorage.getItem("lutteur_bleu");
+            if (lutteur_b == "") {
+                $('.lutteur_b').html("Lutteur bleu");
+            } else {
+                $('.lutteur_b').html(lutteur_b);
+            }
+
+            var club_b = localStorage.getItem("club_bleu");
+            if (club_b == "") {
+                $('.club_b').html("Club non selectionnée");
+            } else {
+                $('.club_b').html(club_b);
+            }
+
+            var avert_b = localStorage.getItem("avertissement_bleu");
+            if (avert_b == 1) {
+                $('.avert-1_b').css('color', '#2631D1');
+                $('.avert-2_b').css('color', '#2631D1');
+                $('.avert-3_b').css('color', 'white');
+            } else if (avert_b == 0) {
+                $('.avert-1_b').css('color', '#2631D1');
+                $('.avert-2_b').css('color', '#2631D1');
+                $('.avert-3_b').css('color', '#2631D1');
+            } else if (avert_b == 2) {
+                $('.avert-1_b').css('color', '#2631D1');
+                $('.avert-2_b').css('color', 'white');
+                $('.avert-3_b').css('color', 'white');
+            } else if (avert_b == 3) {
+                $('.avert-1_b').css('color', 'white');
+                $('.avert-2_b').css('color', 'white');
+                $('.avert-3_b').css('color', 'white');
+            }
+        }
+        setInterval(rouge, 100);
+    </script>
+</body>
+
+</html>

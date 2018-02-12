@@ -18,7 +18,9 @@
         },
         "Pontarlier": {
             "lutteur": {
-                "lutteur_01": {},
+                "lutteur_01": {
+                    "feminine": true,
+                },
                 "lutteur_02": {},
             }
         },
@@ -28,8 +30,64 @@
                 "Aric": {},
             }
         },
+        "Gray": {
+            "lutteur": {
+                "Jean": {},
+                "Aric": {},
+            }
+        },
+        "ACS": {
+            "lutteur": {
+                "Romain": {
+                    "feminine": false
+                },
+                "Yohann": {
+                    "feminine": false
+                },
+                "Lucie": {
+                    "feminine": true
+                },
+                "Kevin": {
+                    "feminine": false
+                },
+                "Antoire" : {
+                    "feminine": false
+                },
+                "Anthony" : {
+                    "feminine": false
+                },
+                "Charlie" : {
+                    "feminine": false
+                },              
+                "Sandrine" : {
+                    "feminine": true
+                } ,
+            }
+        },
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function nom_lutteur(club, lutteur_nom){
 
